@@ -1,0 +1,29 @@
+<form class="row g-3 needs-validation" (ngSubmit)="saveUsers()" #form="ngForm">
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip01" class="form-label">Nombre de usuario</label>
+    <input
+      type="text"
+      class="form-control"
+      id="validationTooltip01"
+      name="usersName" 
+      [(ngModel)]="user.usersName"
+      required
+      #usersName="ngModel"
+    />
+  </div>
+  <div class="col-md-4 position-relative">
+    <label for="validationTooltip02" class="form-label">Contraseña</label>
+    <input
+      type="password"
+      class="form-control"
+      id="validationTooltip02"
+      name="password"  
+      [(ngModel)]="user.password"
+      required
+      #password="ngModel"
+    />
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Adicionar</button>
+  </div>
+</form>

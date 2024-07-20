@@ -1,0 +1,34 @@
+<form class="row g-3 needs-validation" (ngSubmit)="savePersons()" #form="ngForm">
+  <div class="col-md-3 position-relative">
+    <label for="validationTooltip01" class="form-label">Nombres</label>
+    <input type="text" class="form-control" required [(ngModel)]="persons.firstName" name="firstName" #firstName="ngModel">
+    
+  </div>
+  <div class="col-md-3 position-relative">
+    <label for="validationTooltip02" class="form-label">Apellidos</label>
+    <input type="text" class="form-control" [(ngModel)]="persons.lastName" name="lastName" #lastName="ngModel"  required>
+    
+  </div>
+  <div class="col-md-2 position-relative">
+      <label for="validationTooltip04" class="form-label">Tipo Identificación</label>
+      <select class="form-select" id="validationTooltip04" [(ngModel)]="persons.identificationType" name="identificationType" #identificationType="ngModel" required>
+      <option value="" disabled>Selecciona...</option>
+      <option>CC</option>
+      <option>TI</option>
+      <option>PP</option>
+      </select>
+      
+  </div>
+  <div class="col-md-3 position-relative">
+      <label for="validationTooltip02" class="form-label">Identificación</label>
+      <input type="text" class="form-control" [(ngModel)]="persons.identificationNumber" name="identificationNumber" #identificationNumber="ngModel" required>
+      
+  </div>
+  <div class="col-md-3 position-relative">
+    <label for="validationTooltip02" class="form-label">Correo electrónico</label>
+    <input type="email" class="form-control" [(ngModel)]="persons.email" name="email" #email="ngModel" required>    
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Adicionar</button>
+  </div>
+</form>
